@@ -74,32 +74,23 @@ class _ProfileState extends State<Profile> {
                         Color.fromRGBO(255, 154, 154, 0.68),
                       ])),
             ),
-          ),
-          Stack(
-            children: [
-              Positioned(
-                top: MediaQuery.of(context).size.height / 4,
-                left: MediaQuery.of(context).size.width / 5,
-                child: Container(
-                  height: MediaQuery.of(context).size.height * (1 / 2),
-                  width: MediaQuery.of(context).size.width * (1 / 8),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      gradient: LinearGradient(
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                          colors: [
-                            Color.fromRGBO(255, 255, 255, 0.09),
-                            Color.fromRGBO(255, 255, 255, 0.76),
-                          ])),
-                ),
-              ),
-              Positioned(
-                top: MediaQuery.of(context).size.height / 3.5,
-                left: MediaQuery.of(context).size.width / 4.8,
+          ),Center(
+            child: Row(mainAxisAlignment: MainAxisAlignment.center,children:[
+             Container(
+                height: MediaQuery.of(context).size.height * (1 / 2),
+                width: MediaQuery.of(context).size.width * (1 / 8),
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    gradient: LinearGradient(
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                        colors: [
+                          Color.fromRGBO(255, 255, 255, 0.09),
+                          Color.fromRGBO(255, 255, 255, 0.76),
+                        ])),
                 child: Column(
-                  
                   children: [
+                    SizedBox(height: 10),
                     Container(
                       width: MediaQuery.of(context).size.height / 8,
                       height: MediaQuery.of(context).size.height / 8,
@@ -114,7 +105,7 @@ class _ProfileState extends State<Profile> {
                       style: TextStyle(
                           color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          fontSize: 18,
+                          fontSize: 16,
                           fontFamily: 'RobotoMono'),
                     ),
                     Container(
@@ -130,73 +121,70 @@ class _ProfileState extends State<Profile> {
                         ))
                   ],
                 ),
-              )
-            ],
-          ),
-          Positioned(
-            top: MediaQuery.of(context).size.height / 4,
-            left: MediaQuery.of(context).size.width / 3.5,
-            child: Container(
-              height: MediaQuery.of(context).size.height * (1 / 2),
-              width: MediaQuery.of(context).size.width * (1 / 2),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    '''BLAH
-                blah
-                            Blah''',
-                    style: TextStyle(
-                        fontSize: 40,
-                        color: Colors.white,
-                        fontFamily: 'RobotoMono'),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                          height: 25,
-                          width: 25,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("image/insta.png"),
-                                  fit: BoxFit.cover)),
-                          child: TextButton(
-                            child: Text(""),
-                            onPressed: () {},
-                          )),
-                      SizedBox(width: 30),
-                      Container(
-                          height: 25,
-                          width: 25,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("image/linkedin.png"),
-                                  fit: BoxFit.cover)),
-                          child: TextButton(
-                            child: Text(""),
-                            onPressed: () {},
-                          )),
-                      SizedBox(width: 30),
-                      Container(
-                          height: 25,
-                          width: 25,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage("image/github 1.png"),
-                                  fit: BoxFit.cover)),
-                          child: TextButton(
-                            child: Text(""),
-                            onPressed: () {},
-                          ))
-                    ],
-                  )
-                ],
               ),
-            ),
-          ),
+            SizedBox(width: 20),
+            Container(
+                height: MediaQuery.of(context).size.height * (1 / 2),
+                width: MediaQuery.of(context).size.width * (1 / 2),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      '''BLAH
+                  blah
+                              Blah''',
+                      style: TextStyle(
+                          fontSize: 40,
+                          color: Colors.white,
+                          fontFamily: 'RobotoMono'),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                            height: 25,
+                            width: 25,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("image/insta.png"),
+                                    fit: BoxFit.cover)),
+                            child: TextButton(
+                              child: Text(""),
+                              onPressed: () {},
+                            )),
+                        SizedBox(width: 30),
+                        Container(
+                            height: 25,
+                            width: 25,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("image/linkedin.png"),
+                                    fit: BoxFit.cover)),
+                            child: TextButton(
+                              child: Text(""),
+                              onPressed: () {},
+                            )),
+                        SizedBox(width: 30),
+                        Container(
+                            height: 25,
+                            width: 25,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("image/github 1.png"),
+                                    fit: BoxFit.cover)),
+                            child: TextButton(
+                              child: Text(""),
+                              onPressed: () {},
+                            ))
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            
         ],
       ),
+          ),]),
     ));
   }
 }
