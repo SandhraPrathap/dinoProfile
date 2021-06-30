@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 void main() {
   runApp(MaterialApp(home: Profile()));
@@ -103,12 +104,14 @@ class _ProfileState extends State<Profile> {
                         ),
                         Text(
                           "Sandhra Prathap",
-                          style:GoogleFonts.roboto(textStyle:TextStyle(
+                          style: GoogleFonts.roboto(
+                            textStyle: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 18,
                             ),
-                        ),),
+                          ),
+                        ),
                         Container(
                             height: 25,
                             width: 25,
@@ -130,14 +133,22 @@ class _ProfileState extends State<Profile> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          '''BLAH
-              blah
-                              Blah''',
-                          style: GoogleFonts.roboto(textStyle:TextStyle(
-                              fontSize: 60,fontWeight: FontWeight.w200,
-                              color: Colors.white,
-                              ),)
+                        Center(
+                          child: DefaultTextStyle(
+                            style: GoogleFonts.roboto(
+                              textStyle: TextStyle(
+                                fontSize: 40,
+                                fontWeight: FontWeight.w200,
+                                color: Colors.white,
+                              ),
+                            ),
+                            child: AnimatedTextKit(animatedTexts: [
+                              TypewriterAnimatedText(
+                                  ''' Hey!! I am Sandhra... I always like to try out something new and ended up making this...
+ This was not at all sloshy's idea XD...''',
+                                  speed: Duration(milliseconds: 100)),
+                            ]),
+                          ),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -151,7 +162,10 @@ class _ProfileState extends State<Profile> {
                                         fit: BoxFit.cover)),
                                 child: TextButton(
                                   child: Text(""),
-                                  onPressed: () {launch("https://www.instagram.com/sandhra_prathap/");},
+                                  onPressed: () {
+                                    launch(
+                                        "https://www.instagram.com/sandhra_prathap/");
+                                  },
                                 )),
                             SizedBox(width: 30),
                             Container(
@@ -163,7 +177,10 @@ class _ProfileState extends State<Profile> {
                                         fit: BoxFit.cover)),
                                 child: TextButton(
                                   child: Text(""),
-                                  onPressed: () {launch("https://www.linkedin.com/in/sandhra-prathap-p-751a131a6/");},
+                                  onPressed: () {
+                                    launch(
+                                        "https://www.linkedin.com/in/sandhra-prathap-p-751a131a6/");
+                                  },
                                 )),
                             SizedBox(width: 30),
                             Container(
@@ -175,7 +192,9 @@ class _ProfileState extends State<Profile> {
                                         fit: BoxFit.cover)),
                                 child: TextButton(
                                   child: Text(""),
-                                  onPressed: () {launch("https://github.com/SandhraPrathap");},
+                                  onPressed: () {
+                                    launch("https://github.com/SandhraPrathap");
+                                  },
                                 ))
                           ],
                         )
